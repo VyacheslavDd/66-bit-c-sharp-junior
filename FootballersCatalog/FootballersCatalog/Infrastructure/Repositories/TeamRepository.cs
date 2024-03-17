@@ -15,6 +15,11 @@ namespace FootballersCatalog.Infrastructure.Repositories
 			_footballerContext = footballerContext;
 		}
 
+		public async Task<Team> FindTeamByNameAsync(string name)
+		{
+			return await _footballerContext.Teams.Include(t => t.Footballers).FirstOrDefaultAsync(t => t.Name.ToLower() == name.ToLower());
+		}
+
 		public async override Task<Team> GetByGuidAsync(Guid guid)
 		{
 			return await _footballerContext.Teams.Include(t => t.Footballers).FirstOrDefaultAsync(t => t.Id == guid);

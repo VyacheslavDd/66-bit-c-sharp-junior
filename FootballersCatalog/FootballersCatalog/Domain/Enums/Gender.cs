@@ -1,4 +1,6 @@
-﻿namespace FootballersCatalog.Domain.Enums
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FootballersCatalog.Domain.Enums
 {
 	public enum Gender
 	{

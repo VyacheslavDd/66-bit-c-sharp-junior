@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Api\RequestModels\Footballers\" />
-    <Folder Include="Infrastructure\Validators\Footballers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FootballersCatalogCore\FootballersCatalogCore.csproj" />
   </ItemGroup>
 

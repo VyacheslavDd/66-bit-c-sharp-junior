@@ -34,7 +34,7 @@ namespace FootballersCatalogCore.Domain.Base.Repositories
 			await _context.SaveChangesAsync();
 		}
 
-		public virtual async Task<IQueryable<T>> GetAllAsync()
+		public virtual IQueryable<T> GetAllAsync()
 		{
 			return _dbSet;
 		}

@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.TryAddApi();
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddEndpointsApiExplorer().AddSwaggerGenNewtonsoftSupport();
 builder.Services.AddSwaggerGen(opt =>
 {
 	opt.IncludeXmlComments(xmlPath);
@@ -32,7 +32,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<ExceptionMiddleware>();
+//app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 

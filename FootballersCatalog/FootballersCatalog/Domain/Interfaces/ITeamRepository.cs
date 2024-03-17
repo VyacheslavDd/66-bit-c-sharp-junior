@@ -5,5 +5,6 @@ namespace FootballersCatalog.Domain.Interfaces
 {
 	public interface ITeamRepository : IRepository<Team>
 	{
+		Task<Team> FindTeamByNameAsync(string name);
 	}
 }

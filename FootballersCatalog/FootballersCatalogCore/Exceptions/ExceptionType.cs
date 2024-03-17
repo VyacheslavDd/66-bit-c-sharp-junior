@@ -9,6 +9,7 @@ namespace FootballersCatalogCore.Exceptions
 	public enum ExceptionType
 	{
 		NotUniqueTeam,
-		NotExistingTeam
+		NotExistingTeam,
+		NotExistingFootballer
 	}
 }

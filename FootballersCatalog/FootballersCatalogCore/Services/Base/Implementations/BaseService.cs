@@ -31,7 +31,7 @@ namespace FootballersCatalogCore.Services.Base.Implementations
 
 		public virtual async Task<List<T>> GetAllAsync()
 		{
-			return await (await _repository.GetAllAsync()).ToListAsync();
+			return await _repository.GetAllAsync().ToListAsync();
 		}
 
 		public virtual async Task<T> GetByGuidAsync(Guid guid)

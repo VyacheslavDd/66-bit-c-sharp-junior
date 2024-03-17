@@ -5,5 +5,6 @@ namespace FootballersCatalog.Services.Interfaces
 {
 	public interface IFootballerService : IService<Footballer>
 	{
+		Task UpdateAsync(Footballer footballer);
 	}
 }

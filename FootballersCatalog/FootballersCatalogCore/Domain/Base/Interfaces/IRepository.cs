@@ -8,7 +8,7 @@ namespace FootballersCatalogCore.Domain.Base.Interfaces
 {
 	public interface IRepository<T>
 	{
-		Task<IQueryable<T>> GetAllAsync();
+		IQueryable<T> GetAllAsync();
 		Task<T> GetByGuidAsync(Guid guid);
 		Task<Guid> AddAsync(T entity);
 		Task UpdateAsync();

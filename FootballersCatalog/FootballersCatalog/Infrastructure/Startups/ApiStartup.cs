@@ -14,6 +14,7 @@ namespace FootballersCatalog.Infrastructure.Startups
 				{
 					NamingStrategy = new CamelCaseNamingStrategy()
 				});
+				setup.SerializerSettings.DateFormatString = "yyyy-MM-dd";
 			}).AddJsonOptions(config => config.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 			return services;
 		}
